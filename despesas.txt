@@ -1,0 +1,31 @@
+
+NOME DA EMPRESA: XxX
+soluções tecnologicas
+fone: 91 983252639
+------------------------------------
+Data da transação: 2025-01-11 13:47:27
+Descrição: roçador
+Quantidade: 1
+Valor unitário: 100
+------------------------------------
+Parcelas: 1
+Data de vencimento: 2/10/26
+Valor total: 100.0
+Valor parcela: 100.0
+
+**************************************
+BACK INFORMÁTICA
+soluções tecnologicas
+fone: 91 983252639
+------------------------------------
+Data da transação: 2025-01-12 09:16:57
+Descrição: churrasco
+Quantidade: 1
+Valor unitário: 100
+------------------------------------
+Parcelas: 1
+Data de vencimento: 4/14/25
+Valor total: 100.0
+Valor parcela: 100.0
+
+**************************************

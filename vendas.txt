@@ -1,0 +1,18 @@
+
+NOME DA EMPRESA: XxX
+soluções tecnologicas
+fone: 91 983252639
+------------------------------------
+Data da transação: 2025-01-13 18:29:34
+Item: refeição
+Descrição: pf
+Quantidade: 5
+Valor unitário: 10
+------------------------------------
+Valor pago: 100
+Total: 50.0
+Troco: 50.0
+
+Muito obrigado por usar nosso sistema
+
+* * * * * * * * * * * * * * * * * * * *

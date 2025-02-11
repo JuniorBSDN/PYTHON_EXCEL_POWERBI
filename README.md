@@ -1,5 +1,3 @@
-Interface criada em python e tkinter, exclusivamente para cadastrar despesas em um arquivo de excel e visualizar dados com Power B.I,
-arquivos bastante usado em escritorios para analise de dados, a interface conta com um botão para mostrar graficos da analise de gastos, vendas e estoque
-e graficos de PIZZA. 
+Interface GUI totalmente criada em python para cadastrar dados em tabelas do excel e analisar dados com Power B.I, o projeto e a continuidade de um trabalho sobre o uso da I.A em ambientes de trabalho. 
 
-app teste, ainda em desenvolvimento
+equipe: PABULO, FABIO E JUNIOR

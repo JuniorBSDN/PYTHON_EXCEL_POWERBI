@@ -16,7 +16,23 @@ def criar_janela_principal():
     root.geometry("1200x690")
     root.configure(bg="black")
 
-    # Função para cadastrar despesas
+
+
+#DESPESAS
+    def abrir_tabela_despesas():
+            tabela_despesa = "despesas.xlsx"
+            os.startfile(tabela_despesa)
+
+    def abrir_powerbi_despesas():
+        caminho_powerbi_despesas = "despesas.pbix"
+        try:
+            os.startfile(caminho_powerbi_despesas)
+        except FileNotFoundError:
+            print("Arquivo Power BI não encontrado.")
+        except OSError:
+            print("Erro ao abrir o arquivo.")
+    
+ main
     def cadastrar_despesas():
         root.withdraw()
         nova_janela = tk.Toplevel(root)
@@ -287,7 +303,22 @@ def criar_janela_principal():
         buscar_hora()
         carregar_tabela()
 
-    # Função cadastrar vendas
+
+#VENDAS
+    def abrir_tabela_vendas():
+        tabela_venda = "vendas.xlsx"
+        os.startfile(tabela_venda)
+
+    def abrir_powerbi_vendas():
+        caminho_powerbi_vendas = "vendas.pbix"
+        try:
+            os.startfile(caminho_powerbi_vendas)
+        except FileNotFoundError:
+            print("Arquivo Power BI não encontrado.")
+        except OSError:
+            print("Erro ao abrir o arquivo.")
+    
+ main
     def cadastrar_vendas():
         root.withdraw()  # Oculta a janela principal
         nova_janela = tk.Toplevel(root)
@@ -531,7 +562,22 @@ def criar_janela_principal():
         buscar_hora()
         carregar_tabela_vendas()
 
-    #função para adicionar o Estoque
+
+#ESTOQUE
+    def abrir_tabela_estoque():
+        tabela_estoque = "estoque.xlsx"
+        os.startfile(tabela_estoque)
+
+    def abrir_powerbi_estoque():
+        caminho_powerbi_estoque = "estoque.pbix"
+        try:
+            os.startfile(caminho_powerbi_estoque)
+        except FileNotFoundError:
+            print("Arquivo Power BI não encontrado.")
+        except OSError:
+            print("Erro ao abrir o arquivo.")
+
+ main
     def add_estoque():
         root.withdraw()  # Oculta a janela principal
         nova_janela = tk.Toplevel(root)
@@ -621,6 +667,7 @@ def criar_janela_principal():
         def abrir_tabela_estoque():
             tabela = "estoque.xlsx"
             os.startfile(tabela)
+main
 
         def limpar_campos():
             codigo_barras_entry.delete(0, tk.END)
@@ -628,6 +675,7 @@ def criar_janela_principal():
             quantidade_entry.delete(0, tk.END)
             valor_inicial_entry.delete(0, tk.END)
             valor_final_entry.delete(0, tk.END)
+main
 
         def salvar_estoque():
             codigo_barras = codigo_barras_entry.get()
@@ -661,6 +709,7 @@ def criar_janela_principal():
             # Salvar o arquivo
             workbook.save('estoque.xlsx')
             limpar_campos()
+main
 
         # _________________________BANNER DA JANELA PRINCIPAL_______________________________
         botao_voltar = tk.Button(nova_janela, text=" << ", font=("consolas", 12), bg="#222222", bd=0, fg="#00BFFF", command=lambda: voltar_para_janela_principal(nova_janela))
@@ -716,7 +765,10 @@ def criar_janela_principal():
 
         carregar_tabela()
 
-    # _________________________JANELA RELATORIOS_______________________________
+
+
+#RELATORIOS
+main
     def relatorios():
         root.withdraw()  # Oculta a janela principal
         nova_janela = tk.Toplevel(root)
@@ -751,7 +803,9 @@ def criar_janela_principal():
         label_estoque_dash = tk.Label(frame_grafico_estoque, text="Estoque", font="consolas 12 bold", bg="#222222", fg= "#00bfff")
         label_estoque_dash.place(x=10, y=10)
 
-    #cadastre aqui os USUARIOS
+
+#USUARIOS
+main
     def usuarios():
         root.withdraw()  # Oculta a janela principal
         nova_janela = tk.Toplevel(root)
@@ -909,30 +963,56 @@ def criar_janela_principal():
 
     frame_analise_venda = tk.Frame(root, bg="#222222", bd=0, )
     frame_analise_venda.place(x=1040, y=10,  width=150, height=200)
-    label_resultado_vendas = tk.Label(frame_analise_venda, text="Total Venda:", fg="#00bfff", bg="#222222")
+
+    label_resultado_vendas = tk.Label(frame_analise_venda, text="Total de entradas:", fg="#00bfff", bg="#222222")
+main
     label_resultado_vendas.place(x=10, y=10)
     label_total_vendas = tk.Label(frame_analise_venda, text="", fg="#00bfff", bg="#222222", font="consolas 12 bold" )
     label_total_vendas.place(x=10, y=40)
 
     label_result = tk.Label(frame_analise_venda, text=f"R$:{somar_vendas()}", fg="#00bfff", bg="#222222", font="consolas 12 bold")
-    label_result.place(x=10, y=70)
+
+    label_result.place(x=10, y=40)
+
+    ver_tab_venda = tk.Button(frame_analise_venda, text=" Xlsx", fg="white", bg="#333333", bd=0, command= abrir_tabela_vendas)
+    ver_tab_venda.place(x=10, y=80, width=130, height=50)
+
+    ver_analise_venda = tk.Button(frame_analise_venda, text="Power B.I", fg="white", bg="#333333", bd=0, command= abrir_powerbi_vendas)
+    ver_analise_venda.place(x=10, y=135, width=130, height=50)
 
     frame_analise_despesa = tk.Frame(root, bg="#222222", bd=0, )
     frame_analise_despesa.place(x=1040, y=220, width=150, height=200)
-    label_resultado_despesa = tk.Label(frame_analise_despesa, text="Total despesas:", fg="#00bfff", bg="#222222")
+    label_resultado_despesa = tk.Label(frame_analise_despesa, text="Total de gastos:", fg="#00bfff", bg="#222222")
+main
     label_resultado_despesa.place(x=10, y=10)
 
     label_result1 = tk.Label(frame_analise_despesa, text=f"R$:{somar_despesas()}", fg="#00bfff", bg="#222222", font="consolas 12 bold")
     label_result1.place(x=10, y=40)
 
+
+    ver_tab_despesa = tk.Button(frame_analise_despesa, text="Xlsx", fg="white", bg="#333333", bd=0, command=lambda: abrir_tabela_despesas)
+    ver_tab_despesa.place(x=10, y=80, width=130, height=50)
+
+    ver_analise_despesa = tk.Button(frame_analise_despesa, text="Power B.I", fg="white", bg="#333333", bd=0, command= abrir_powerbi_despesas)
+    ver_analise_despesa.place(x=10, y=135, width=130, height=50)
+
     frame_analise_estoque = tk.Frame(root, bg="#222222", bd=0, )
     frame_analise_estoque.place(x=1040, y=430, width=150, height=200)
-    label_resultado_estoque = tk.Label(frame_analise_estoque, text="Total estoque:", fg="#00bfff", bg="#222222")
+    label_resultado_estoque = tk.Label(frame_analise_estoque, text="Total armazenado:", fg="#00bfff", bg="#222222")
+main
     label_resultado_estoque.place(x=10, y=10)
 
     label_resul2 = tk.Label(frame_analise_estoque, text=f"R$:{somar_estoque()}", fg="#00bfff", bg="#222222", font="consolas 12 bold")
     label_resul2.place(x=10, y=40)
 
+
+    ver_tab_estoque = tk.Button(frame_analise_estoque, text="Xlsx", fg="white", bg="#333333", bd=0, command=lambda: abrir_nova_janela("Estoque"))
+    ver_tab_estoque.place(x=10, y=80, width=130, height=50)
+
+    ver_analise_estoque = tk.Button(frame_analise_estoque, text="Power B.I", fg="white", bg="#333333", bd=0, command= abrir_powerbi_estoque)
+    ver_analise_estoque.place(x=10, y=135, width=130, height=50)
+
+main
     versao = tk.Label(frame_logo, text="v1.0", bg="black", fg="#00BFFF", font=("consolas", 12, "bold"))
     versao.place(x=300, y=355)
 
